@@ -1,18 +1,11 @@
 
 exports.up = function(knex) {
-    return knex.schema.createTable('anemones', table => {
+    return knex.schema.createTable('genus', table => {
         table.increments('id')
-        table.string('name')
-        table.string('species')
-        table.integer('genus_id')
-        table.integer('location_id')
-        table.integer('column_id')
-        table.integer('tentacules_id')
-        table.integer('color_id')
-        table.boolean('acontia')
+        table.string('genus')
       })
 };
 
 exports.down = function(knex) {
-  
+    return knex.schema.dropTable('genus')
 };
