@@ -7,7 +7,11 @@ exports.seed = function(knex) {
           {id: 1, genus: 'Anthopleura'},
           {id: 2, genus: 'Diadumene'},
           {id: 3, genus: 'Anthotoe'},
-          {id: 3, genus: 'Anthotoe'}
+          {id: 4, genus: 'Oulactis'},
+          {id: 5, genus: 'Bunodosama'},
+          {id: 6, genus: 'Anemonia'},
+          {id: 7, genus: 'Heteractis'},
+          {id: 8, genus: 'Actinia'}
         ]);
       });
   };
