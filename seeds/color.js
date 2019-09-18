@@ -4,11 +4,11 @@ exports.seed = function(knex) {
       .then(function () {
         // Inserts seed entries
         return knex('color').insert([
-          {id: 1, aspect: 'orange'},
-          {id: 2, aspect: 'green'},
-          {id: 3, aspect: 'red'},
-          {id: 4, aspect: 'purple'},
-          {id: 5, aspect: 'white'}
+          {id: 1, color: 'orange'},
+          {id: 2, color: 'green'},
+          {id: 3, color: 'red'},
+          {id: 4, color: 'purple'},
+          {id: 5, color: 'white'}
         ]);
       });
   };
