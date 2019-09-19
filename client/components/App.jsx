@@ -1,23 +1,15 @@
 import React from 'react'
 
 import Header from './Header'
-import LocationFilter from './LocationFilter'
+// import LocationFilter from './LocationFilter'
 import ColorFilter from './ColorFilter'
-import GenusFilter from './GenusFilter'
-import ColumnFilter from './ColumnFilter'
-import TentaculesFilter from './TentaculesFilter'
-import { getFruits } from '../apiClient'
+// import GenusFilter from './GenusFilter'
+// import ColumnFilter from './ColumnFilter'
+// import TentaculesFilter from './TentaculesFilter'
 
 class App extends React.Component {
   state = {
     fruits: []
-  }
-
-  componentDidMount () {
-    getFruits()
-      .then(fruits => {
-        this.setState({fruits})
-      })
   }
 
   render () {
@@ -25,17 +17,12 @@ class App extends React.Component {
       <div className='app'>
         <Header />
         <div id='filters'>
-            <LocationFilter />
+            {/* <LocationFilter /> */}
             <ColorFilter />
-            <GenusFilter />
+            {/* <GenusFilter />
             <ColumnFilter />
-            <TentaculesFilter />
+            <TentaculesFilter /> */}
         </div>
-        <ul>
-          {this.state.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
       </div>
     )
   }

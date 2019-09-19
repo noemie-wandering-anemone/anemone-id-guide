@@ -1,25 +1,27 @@
 import React from 'react'
 
+import {getData} from '../apiClient'
+
 class ColorFilter extends React.Component {
     state = {
-        colors: []
+        color: []
     }
 
     componentDidMount() {
-        getColors()
+        getData('color')
             .then(color => {
-                this.setState({ colors })
+                this.setState({ color })
             })
     }
 
     render() {
         return (
-            <div class='filter'>
-                <label for="color">Color:</label>
+            <div className='filter'>
+                <label htmlFor="color">Color:</label>
 
                 <select id="color">
                     <option value="">----</option>
-                    {this.state.colors.map(color => (
+                    {this.state.color.map(color => (
                         <option key={color}>{color}</option>
                     ))}
                 </select>
