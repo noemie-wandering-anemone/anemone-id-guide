@@ -8,7 +8,7 @@ exports.seed = function(knex) {
           {id: 2, genus: 'Diadumene'},
           {id: 3, genus: 'Anthotoe'},
           {id: 4, genus: 'Oulactis'},
-          {id: 5, genus: 'Bunodosama'},
+          {id: 5, genus: 'Bunodosoma'},
           {id: 6, genus: 'Anemonia'},
           {id: 7, genus: 'Heteractis'},
           {id: 8, genus: 'Actinia'}
