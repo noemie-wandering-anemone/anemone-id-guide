@@ -7,7 +7,7 @@ module.exports = {
 }
 
 function getData (filter) {
-  if (filter === 'column') {
+  if (filter === 'column' || filter === 'tentacules') {
     return db(filter).select('aspect')
   }
   return db(filter).select()

@@ -5,7 +5,7 @@ import LocationFilter from './LocationFilter'
 import ColorFilter from './ColorFilter'
 import GenusFilter from './GenusFilter'
 import ColumnFilter from './ColumnFilter'
-// import TentaculesFilter from './TentaculesFilter'
+import TentaculesFilter from './TentaculesFilter'
 
 class App extends React.Component {
   state = {
@@ -21,7 +21,7 @@ class App extends React.Component {
             <ColorFilter />
             <GenusFilter />
             <ColumnFilter />
-            {/* <TentaculesFilter /> */}
+            <TentaculesFilter />
         </div>
       </div>
     )

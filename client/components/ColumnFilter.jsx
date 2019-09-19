@@ -17,7 +17,7 @@ class ColumnFilter extends React.Component {
     render() {
         return (
             <div className='filter'>
-                <label htmlFor="column">column:</label>
+                <label htmlFor="column">Column:</label>
 
                 <select id="column">
                     <option value="">----</option>
