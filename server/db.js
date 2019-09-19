@@ -1,11 +1,10 @@
-const env = process.env.NODE_ENV || 'development'
-const config = require('../knexfile')[env]
-const db = require('knex')(config)
-
 module.exports = {
-  getFruits
+  getData
 }
 
-function getFruits () {
-  return db('fruit').select()
+function getData (db, filter) {
+  if (filter === 'column' || filter === 'tentacules') {
+    return db(filter).select('aspect')
+  }
+  return db(filter).select()
 }

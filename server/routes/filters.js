@@ -4,10 +4,10 @@ const db = require('../db')
 
 const router = express.Router()
 
-router.get('/', (req, res) => {
-  db.getFruits()
+router.get('/:filter', (req, res) => {
+  db.getData(req.app.connection, req.params.filter)
     .then(results => {
-      res.json({fruits: results.map(fruit => fruit.name)})
+      res.send(results)
     })
 })
 
