@@ -1,10 +1,15 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
 import {getData} from '../apiClient'
+import{addFilter} from '../actions/index'
 
 class ColumnFilter extends React.Component {
-    state = {
-        column: []
+    constructor(props) {
+        super(props)
+        this.state = {
+            column: []
+        }
     }
 
     componentDidMount() {
@@ -19,7 +24,7 @@ class ColumnFilter extends React.Component {
             <div className='filter'>
                 <label htmlFor="column">Column:</label>
 
-                <select id="column">
+                <select id="column" onChange={()=> {this.props.dispatch(addFilter(event.target.id, event.target.value))}}>
                     <option value="">----</option>
                     {this.state.column.map(column => (
                         <option key={column}>{column}</option>
@@ -30,4 +35,4 @@ class ColumnFilter extends React.Component {
     }
 }
 
-export default ColumnFilter
+export default connect()(ColumnFilter)
