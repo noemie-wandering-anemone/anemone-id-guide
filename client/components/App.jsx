@@ -3,7 +3,7 @@ import React from 'react'
 import Header from './Header'
 // import LocationFilter from './LocationFilter'
 import ColorFilter from './ColorFilter'
-// import GenusFilter from './GenusFilter'
+import GenusFilter from './GenusFilter'
 // import ColumnFilter from './ColumnFilter'
 // import TentaculesFilter from './TentaculesFilter'
 
@@ -19,8 +19,8 @@ class App extends React.Component {
         <div id='filters'>
             {/* <LocationFilter /> */}
             <ColorFilter />
-            {/* <GenusFilter />
-            <ColumnFilter />
+            <GenusFilter />
+            {/* <ColumnFilter />
             <TentaculesFilter /> */}
         </div>
       </div>
