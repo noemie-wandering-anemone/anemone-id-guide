@@ -1,6 +1,8 @@
   import {ADD_FILTER} from '../actions'
 
-const initialFilters = 0
+const initialFilters = {
+    color: null
+}
 
 const filters = (state = initialFilters, action) => {
     console.log('reduce!')
@@ -8,13 +10,12 @@ const filters = (state = initialFilters, action) => {
     switch (action.type) {
       case ADD_FILTER:
         return {
-            num: 2
-            // ...state.filters,
-            // [action.filter]: action.value
+            ...state,
+            [action.filter]: action.value
         }
   
       default:
-        return 2
+        return state
     }
   }
 
