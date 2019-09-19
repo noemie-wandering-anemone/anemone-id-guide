@@ -5,7 +5,7 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/:filter', (req, res) => {
-  db.getData(req.params.filter)
+  db.getData(req.app.connection, req.params.filter)
     .then(results => {
       res.send(results)
     })
