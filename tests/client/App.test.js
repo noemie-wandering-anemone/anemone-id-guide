@@ -4,6 +4,7 @@ import Adapter from 'enzyme-adapter-react-16'
 import './config/enzyme'
 
 import App from '../../client/components/App'
+import Header from '../../client/components/Header';
 App.prototype.componentDidMount = () => {}
 
 Enzyme.configure({adapter: new Adapter()})
@@ -19,7 +20,7 @@ test('<App> root has className of app', () => {
 })
 
 test('page header includes Anemones', () => {
-  const wrapper = render(<App />)
+  const wrapper = render(<Header />)
   const h1 = wrapper.find('h1')
   expect(h1.text()).toMatch(/Anemones/)
 })
