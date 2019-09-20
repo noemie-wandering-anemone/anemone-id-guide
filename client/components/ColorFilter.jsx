@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import {getData} from '../apiClient'
-import{addFilter} from '../actions/index'
+import {addFilter} from '../actions/index'
 
 class ColorFilter extends React.Component {
     constructor(props) {
