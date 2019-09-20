@@ -12,6 +12,6 @@ function getData (db, filter) {
 
 function getAnemones (db) {
   return db('anemone')
-    .join('color', 'anemone.color_id', 'color.id')
-    .select()
+    .join('color', 'color.id', 'anemone.color_id')
+    .select('*', 'anemone.id AS id')
 }
