@@ -1,5 +1,6 @@
 module.exports = {
-  getData
+  getData,
+  getAnemones
 }
 
 function getData (db, filter) {
@@ -7,4 +8,10 @@ function getData (db, filter) {
     return db(filter).select('aspect')
   }
   return db(filter).select()
+}
+
+function getAnemones (db) {
+  return db('anemone')
+    .join('color', 'anemone.color_id', 'color.id')
+    .select()
 }

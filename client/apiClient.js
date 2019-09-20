@@ -10,3 +10,10 @@ export function getData(filter) {
       return criteriaList
     })
 }
+
+export function getAnemones() {
+  return request.get(rootUrl + '/anemones')
+    .then(res => {
+      return res.body
+    })
+}
