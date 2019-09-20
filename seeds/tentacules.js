@@ -4,9 +4,10 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('tentacules').insert([
-        {id: 1, aspect: 'long'},
-        {id: 2, aspect: 'short'},
-        {id: 3, aspect: 'stuby'}
+        {id: 1, description: 'long'},
+        {id: 2, description: 'short'},
+        {id: 3, description: 'stuby'},
+        {id: 4, description: ''}
       ]);
     });
 };
