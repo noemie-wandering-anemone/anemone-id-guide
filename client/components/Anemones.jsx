@@ -21,12 +21,24 @@ class Anemones extends React.Component {
             })
     }
 
+    // filterAnemone = () => {
+    //     const matchingAnemones = this.state.anemones.filter(anemone => {
+    //         for (const prop in this.props.filters) {
+    //             if (anemone[prop]) {
+    //                 console.log(anemone)
+    //             }
+    //         }
+    //     })
+    // }
+   
+
     render() {
     return (
         <div id='content'>
             <h2>Anemones Species</h2>
             <div id='anemones'>
-                {this.state.anemones.map(anemone => {
+                {/* {this.filterAnemone() */}
+                 {   this.state.anemones.map(anemone => {
                     return (
                         <Anemone key={anemone.id} anemone={anemone} />
                     )
