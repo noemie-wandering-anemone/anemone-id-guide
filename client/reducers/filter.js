@@ -1,6 +1,9 @@
   import {ADD_FILTER} from '../actions'
 
-const initialFilters = {}
+const initialFilters = {
+  color: 'red',
+  location: 'South Pacific'
+}
 
 const filters = (state = initialFilters, action) => {
     switch (action.type) {
