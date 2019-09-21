@@ -4,10 +4,10 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('tentacules').insert([
-        {id: 1, description: 'long'},
-        {id: 2, description: 'short'},
-        {id: 3, description: 'stuby'},
-        {id: 4, description: ''}
+        {id: 1, tentacules: 'long'},
+        {id: 2, tentacules: 'short'},
+        {id: 3, tentacules: 'stuby'},
+        {id: 4, tentacules: ''}
       ]);
     });
 };
