@@ -23,21 +23,17 @@ class Anemones extends React.Component {
             })
     }
 
-    componentDidUpdate() {
-        console.log(typeof filterAnemones)
-        console.log(this.state.anemones)
-        console.log(this.props.filters)
-        filterAnemones(this.state.anemones, this.props.filters)
+    componentDidUpdate(prevProps) {
+        if (this.props.filters != prevProps.filters) {
+            filterAnemones(this.state.anemones, this.props.filters)
             .then(matchingAnemones => {
+                console.log('component', matchingAnemones)
                 this.setState({
                     anemones: matchingAnemones
                 })
             })
+        } 
     }
-        // console.log(this.state.anemones)             
-
-    
-
 
     render() {
         return (
