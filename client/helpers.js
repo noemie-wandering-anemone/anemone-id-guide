@@ -11,13 +11,13 @@ export function filterAnemones (anemones, filters) {
     filtersArray.forEach(filter => {
     //  check if anemone matches the filter
         matchingAnemones = anemones.filter(filteringFunction, filter) 
-        console.log('win?', matchingAnemones)
     })
     return matchingAnemones
 }
 
 //  Check:
 function filteringFunction (anemone) {
+        console.log(this)
     //      if anemone has filter key and filter value
             if (anemone[this[0]] != [this[1]]) {
     //      if not matching, remove it from array
