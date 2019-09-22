@@ -25,7 +25,7 @@ class Anemones extends React.Component {
 
     componentDidUpdate(prevProps) {
         if (this.props.filters != prevProps.filters) {
-            filterAnemones(this.state.anemones, this.props.filters)
+            Promise.all(filterAnemones(this.state.anemones, this.props.filters))
             .then(matchingAnemones => {
                 console.log('component', matchingAnemones)
                 this.setState({
