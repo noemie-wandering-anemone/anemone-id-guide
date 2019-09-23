@@ -5,7 +5,7 @@ const Anemone = (props) => {
     return (
         <div className='anemone'>
             <p>{anemone.name}</p>
-            <p>{anemone.genus} {anemone.species}</p>
+            <p className='species'>{anemone.genus} {anemone.species}</p>
         </div>
     )
 }

@@ -2,7 +2,7 @@
 exports.up = function(knex) {
     return knex.schema.createTable('column', table => {
         table.increments('id')
-        table.string('aspect')
+        table.string('column')
       })
 };
 
