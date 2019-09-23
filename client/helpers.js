@@ -1,27 +1,25 @@
 export function filterAnemones (anemones, filters) {
     // Starting point:
     //      - array of anemones objects
-    // let anemonesMatching = anemones
+    let matchingAnemones = anemones
     //      - a filters object
     let filtersArray = Object.entries(filters)
-    let matchingAnemones = []
     
     // Goal:
     // Look at each filter:
     filtersArray.forEach(filter => {
     //  check if anemone matches the filter
-        matchingAnemones = anemones.filter(filteringFunction, filter) 
+        matchingAnemones = matchingAnemones.filter(filteringFunction, filter) 
     })
     return matchingAnemones
 }
 
-//  Check:
+//  Check if anemone has filter key and filter value:
 function filteringFunction (anemone) {
-        console.log(this)
-    //      if anemone has filter key and filter value
-            if (anemone[this[0]] != [this[1]]) {
+    //      if value = null, keep anemone
+            if (this[1] === '') return true
     //      if not matching, remove it from array
-                return false        }
+            if (anemone[this[0]] != [this[1]]) return false
     //      if yes keep the anemone    
             return true   
 }
