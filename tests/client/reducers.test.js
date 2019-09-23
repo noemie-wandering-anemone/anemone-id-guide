@@ -24,7 +24,7 @@ describe('anemones reducer', () => {
     test('filter reducer add the right value', () => {
         let initialState = []
         let testAnemones = [{id: 1, name: 'Green Striped Anemone', color_id: 'green'},
-        {id: 2, name: 'Starburst Anemone', color_id: 'purple'}]
+                            {id: 2, name: 'Starburst Anemone', color_id: 'purple'}]
         let state = anemones(initialState, listAnemones(testAnemones))
         expect(state.length).toBe(2)
     })
