@@ -4,7 +4,6 @@ export function filterAnemones (anemones, filters) {
     let matchingAnemones = anemones
     //      - a filters object
     let filtersArray = Object.entries(filters)
-    
     // Goal:
     // Look at each filter:
     filtersArray.forEach(filter => {
