@@ -1,22 +1,14 @@
-# Fullstack boilerplate
+# Sae anemones ID guide
 
-To get started:
-
-```
-git clone https://github.com/dev-academy-challenges/boilerplate-fullstack [your-project-name]
-cd [your-project-name]
-npm install # to install dependencies
-npm run dev # to start the dev server
-```
-
-You can find the server running on [http://localhost:3000](http://localhost:3000).
-
-This repo includes:
-
-* a single, simple API endpoint (`/api/v1/fruits`)
-* a single React component (`<App />`)
-* a fake database module (`db.js`)
-* an API client module (`apiClient.js`)
-* configuration for Jest and Enzyme (including JSDOM)
-* configuration for server-side debugging in VS Code
-* a single client-side test (`/tests/client/App.test.js`)
+### User stories
+ - As a user, I want to be able to use criteria to generate a list of taxa similar to the species I want to ID
+ - I want to access up to date information about each taxon
+ - I want to be able to compare my anemone with other specimens
+ - I want to help others identify anemones
+ - I want to access scientific ressources around anemones
+ 
+ ### Learning objectives
+ - Use Redux to filter data [x]
+ - Use iNaturalist API to retrieve information about taxa
+ - Monitor taxa and updata data to be aligned with the scientific community
+ - Use iNaturalist API to display observations needing ID
