@@ -1,4 +1,4 @@
-# Sae anemones ID guide
+# Sea anemones ID guide
 
 ### User stories
  - As a user, I want to be able to use criteria to generate a list of taxa similar to the species I want to ID
